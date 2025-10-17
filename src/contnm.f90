@@ -352,11 +352,12 @@
                   ENDIF                                                 
 !   ***                                                                 
 !     Correction to the self continuum     mt_ckd_2.5   Jan 2010        
+!     Disabled for consistency with SST CCI Phase 2 retrieval
 !   ***                                                                 
-                  IF (VJ .GE. 2000. .AND. VJ .LE. 3190.) THEN           
-                     JFAC = (VJ - 1990.)/10. + 0.00001                  
-                     SFAC = XFACREV1(JFAC)                              
-                  ENDIF                                                 
+!                  IF (VJ .GE. 2000. .AND. VJ .LE. 3190.) THEN           
+!                     JFAC = (VJ - 1990.)/10. + 0.00001                  
+!                     SFAC = XFACREV1(JFAC)                              
+!                  ENDIF                                                 
                                                                         
                   sfac = sfac * ( 1 + ( f1/(1+(VJ/beta)**n_s) ) )       
                                                                         
